@@ -31,3 +31,19 @@
     transform: rotate(360deg);
   }
 }
+
+nav {
+  padding: 20px;
+  background-color: darkred;
+}
+
+nav a {
+  color: lightgrey;
+  margin: 20px;
+  text-decoration: none;
+}
+
+.active {
+  font-weight: bold;
+  color: white;
+}

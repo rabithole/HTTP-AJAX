@@ -5,11 +5,22 @@ const NewFriend = props => {
     <div>
       <h2>New Friend Form</h2>
       <form>
-        <input 
-          type='text'
-          name='name'
-        />
+        <p>
+          <input 
+            type='text'
+            name='name'
+            placeholder='Name'
+          />
+        </p>
+        <p>
+          <input 
+            type='text'
+            name='age'
+            placeholder='Age'
+          />
+        </p>
       </form>
+      <button>Add your new friend!</button>
     </div>
   )
 };

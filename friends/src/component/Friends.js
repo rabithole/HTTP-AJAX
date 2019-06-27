@@ -5,7 +5,9 @@ const Friends = props => {
     <div>
       <h2>My list of friends!</h2>
       {props.friends.map(item => (
-        <p>{`Name: ${item.name} ~ Age: ${item.age}`}</p>
+        <p key={Math.floor(Math.random() * 10000) + 10}>
+          {`Name: ${item.name} ~ Age: ${item.age}`}
+        </p>
       ))}
       <p>{props.name}</p>
     </div>
