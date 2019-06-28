@@ -47,3 +47,22 @@ nav a {
   font-weight: bold;
   color: white;
 }
+
+input {
+  border: solid 2px red;
+  border-radius: 3px;
+  padding: 10px;
+  width: 300px;
+  box-shadow: 3px 3px 8px blue;
+}
+
+button {
+  padding: 5px 20px;
+  border-radius: 3px;
+  box-shadow: 3px 3px 8px blue;
+  border: solid 2px red;
+}
+
+h2 {
+  text-shadow: 5px 5px 5px blue;
+}

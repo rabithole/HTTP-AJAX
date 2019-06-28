@@ -26,6 +26,18 @@ class App extends React.Component {
       });
   }
 
+  addItem = item => {
+    console.log('Add item in app.js')
+    axios
+      .post('http://localhost:5000/friends', item)
+      .then(res => {
+        this.setState({ friends: res.data }) // This updates state so the added person will render in real time. 
+        this.props.history.push('/App')
+        }) 
+
+      .catch(err => console.log(err))
+  }
+
   render() {
      return (
       <div className="App">
@@ -48,7 +60,7 @@ class App extends React.Component {
           <Route 
             path='/NewFriend'
             render={props => <NewFriend {...props}
-
+            addItem={this.addItem}
             />}/>
         </header>
       </div>
