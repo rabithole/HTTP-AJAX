@@ -61,8 +61,22 @@ button {
   border-radius: 3px;
   box-shadow: 3px 3px 8px blue;
   border: solid 2px red;
+  margin-left: 20px;
 }
 
 h2 {
   text-shadow: 5px 5px 5px blue;
+}
+
+.personLeft {
+  text-align: left;
+}
+
+strong {
+  color: maroon;
+  margin-right: 20px;
+}
+
+.personLeft strong:nth-child(3) {
+  margin-right: 43px;
 }

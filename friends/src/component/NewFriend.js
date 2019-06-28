@@ -46,6 +46,7 @@ class NewFriend extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <p>
             <input 
+              autoFocus
               type='text'
               name='name'
               placeholder='Name'

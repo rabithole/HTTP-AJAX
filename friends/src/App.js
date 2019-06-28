@@ -27,15 +27,23 @@ class App extends React.Component {
   }
 
   addItem = item => {
-    console.log('Add item in app.js')
     axios
       .post('http://localhost:5000/friends', item)
       .then(res => {
         this.setState({ friends: res.data }) // This updates state so the added person will render in real time. 
-        this.props.history.push('/App')
+        this.props.history.push('/') // Returns to the home page after submitting the new friend...
         }) 
 
       .catch(err => console.log(err))
+  }
+
+  deleteItem = (e, item) => {
+    e.preventDefault();
+    axios.delete(`http://localhost:5000/friends/${item.id}`)
+      .then(res => {
+        this.setState({ friends: res.data });
+        this.props.history.push('/');
+      })
   }
 
   render() {
@@ -54,6 +62,7 @@ class App extends React.Component {
           <Route 
             exact path='/' 
             render={props => <Friends {...props}
+            deleteItem={this.deleteItem}
             friends={this.state.friends}
           />}/>
 
